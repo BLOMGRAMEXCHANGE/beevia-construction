@@ -32,7 +32,7 @@ export default function Home() {
         </span>
         <span className="hidden sm:inline text-xs text-[var(--muted)]">
           {'{ '}
-          <span className="text-accent">under construction</span>
+          <span className="text-accent">coming soon</span>
           {' }'}
         </span>
       </header>

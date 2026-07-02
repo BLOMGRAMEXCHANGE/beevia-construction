@@ -11,7 +11,7 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Beevia — {under construction}',
+  title: 'Beevia — {coming soon}',
   description:
     'Beevia is a secure messaging and financial platform, launching soon in Nigeria. Encrypted chat, calling, translation, and a licensed NGN account in one place',
 };
