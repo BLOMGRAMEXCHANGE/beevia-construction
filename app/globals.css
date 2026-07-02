@@ -6,8 +6,8 @@
   --fg: #eef1f0;
   --muted: #838f93;
   --muted-dim: #576065;
-  --accent: #29e0a0;
-  --accent-dim: rgba(41, 224, 160, 0.14);
+  --accent: #eef1f0;
+  --accent-dim: rgba(238, 241, 240, 0.14);
   --border: rgba(238, 241, 240, 0.1);
 }
 
@@ -31,7 +31,7 @@ body {
   color: var(--fg);
   font-family: var(--font-space-mono), ui-monospace, monospace;
   background-image:
-    radial-gradient(ellipse 60% 40% at 50% -5%, rgba(41, 224, 160, 0.16), transparent),
+    radial-gradient(ellipse 60% 40% at 50% -5%, rgba(238, 241, 240, 0.12), transparent),
     linear-gradient(var(--border) 1px, transparent 1px),
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: auto, 44px 44px, 44px 44px;
@@ -39,7 +39,7 @@ body {
 }
 
 ::selection {
-  background: var(--accent);
+  background: var(--fg);
   color: #06080a;
 }
 
@@ -65,10 +65,10 @@ body {
 
 @keyframes pulse-dot {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(41, 224, 160, 0.55);
+    box-shadow: 0 0 0 0 rgba(238, 241, 240, 0.55);
   }
   50% {
-    box-shadow: 0 0 0 5px rgba(41, 224, 160, 0);
+    box-shadow: 0 0 0 5px rgba(238, 241, 240, 0);
   }
 }
 
