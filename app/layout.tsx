@@ -1,19 +1,19 @@
-import type { Metadata } from "next";
-import { Space_Mono } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Space_Mono } from 'next/font/google';
+import './globals.css';
 
 const spaceMono = Space_Mono({
-  variable: "--font-space-mono",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  display: "swap",
+  variable: '--font-space-mono',
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "Beevia — {under construction}",
+  title: 'Beevia — {under construction}',
   description:
-    "Beevia is a secure messaging and multi-currency financial platform, launching soon. Encrypted chat, calling, translation, and licensed multi-currency wallets in one place.",
+    'Beevia is a secure messaging and financial platform, launching soon in Nigeria. Encrypted chat, calling, translation, and a licensed NGN account in one place',
 };
 
 export default function RootLayout({

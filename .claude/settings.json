@@ -4,7 +4,14 @@
       "Read(//Applications/**)",
       "Bash(npx --no-install playwright --version)",
       "Bash(cat /tmp/beevia-dev.log)",
-      "Read(//private/tmp/**)"
+      "Read(//private/tmp/**)",
+      "Bash(find /var/folders/r6/jgmhgty923ddkmfmx_bb33n80000gn/T -maxdepth 1 -name \"next-panic-6eb8badcc180415f64f245ad1c38d085.log\" 2>/dev/null)",
+      "Read(//private/var/folders/r6/jgmhgty923ddkmfmx_bb33n80000gn/T/**)",
+      "Read(//var/folders/r6/jgmhgty923ddkmfmx_bb33n80000gn/T/**)",
+      "Bash(rm -rf .next)"
+    ],
+    "additionalDirectories": [
+      "/Users/promiseudo/blomgram/beevia-under-construction/.next"
     ]
   }
 }
