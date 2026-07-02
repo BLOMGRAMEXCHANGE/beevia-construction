@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Applications/**)",
+      "Bash(npx --no-install playwright --version)",
+      "Bash(cat /tmp/beevia-dev.log)",
+      "Read(//private/tmp/**)"
+    ]
+  }
+}

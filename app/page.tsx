@@ -1,65 +1,107 @@
-import Image from "next/image";
+import BraceTypewriter from './BraceTypewriter';
+
+const FEATURES = [
+  {
+    tag: 'messaging',
+    title: 'Secure messaging & calling',
+    body: 'End-to-end encrypted chat and audio/video calls, with opt-in translation across five languages.',
+  },
+  {
+    tag: 'account',
+    title: 'Your own NGN account',
+    body: 'A named virtual account in Naira, tied to your profile. Send or request money without leaving the conversation.',
+  },
+  {
+    tag: 'identity',
+    title: 'Licensed verification',
+    body: 'Verified by an independent, licensed identity provider, never Beevia.',
+  },
+  {
+    tag: 'cards',
+    title: 'Virtual cards',
+    body: 'Issue a virtual card linked to your account, masked by default, revealed only after authentication.',
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="flex flex-col flex-1 text-fg">
+      <header className="flex items-center justify-between px-6 py-6 sm:px-10 max-w-5xl mx-auto w-full">
+        <span className="text-lg font-bold tracking-tight">
+          beevia<span className="text-accent">.</span>
+        </span>
+        <span className="hidden sm:inline text-xs text-[var(--muted)]">
+          {'{ '}
+          <span className="text-accent">under construction</span>
+          {' }'}
+        </span>
+      </header>
+
+      <main className="flex-1 flex flex-col items-center justify-center px-6 sm:px-10">
+        <div className="max-w-2xl w-full flex flex-col items-center text-center gap-8 py-14">
+          <h1
+            className="rise text-3xl sm:text-5xl font-bold leading-tight tracking-tight"
+            style={{ animationDelay: '80ms' }}
+          >
+            Message. Call. Move money.
+            <br />
+            All in <span className="text-accent">one</span> place.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <div
+            className="rise text-lg sm:text-xl"
+            style={{ animationDelay: '160ms' }}
+          >
+            <BraceTypewriter />
+          </div>
+
+          <p
+            className="rise max-w-lg text-sm sm:text-base leading-7 text-[var(--muted)]"
+            style={{ animationDelay: '220ms' }}
+          >
+            Beevia pairs end-to-end encrypted messaging and calling with a
+            licensed NGN account of your own.
           </p>
+
+          {/* <div
+            className="rise inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-raised)] px-4 py-1.5 text-xs text-[var(--muted)]"
+            style={{ animationDelay: '280ms' }}
+          >
+            <span className="text-accent">NGN</span>
+            launching first in Nigeria &middot; more currencies to follow
+          </div> */}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div
+          className="rise grid w-full max-w-4xl grid-cols-1 gap-4 pb-16 sm:grid-cols-2 lg:grid-cols-4"
+          style={{ animationDelay: '340ms' }}
+        >
+          {FEATURES.map((f) => (
+            <div
+              key={f.tag}
+              className="flex flex-col gap-2 rounded border border-[var(--border)] bg-[var(--bg-raised)] p-5"
+            >
+              <span className="text-xs text-accent">
+                {'{'}
+                {f.tag}
+                {'}'}
+              </span>
+              <h2 className="text-sm font-bold leading-5">{f.title}</h2>
+              <p className="text-xs leading-5 text-[var(--muted)]">{f.body}</p>
+            </div>
+          ))}
         </div>
       </main>
+
+      <footer className="border-t border-[var(--border)] px-6 py-8 sm:px-10">
+        <div className="mx-auto flex max-w-5xl flex-col gap-3 text-xs text-[var(--muted-dim)] sm:flex-row sm:items-center sm:justify-between">
+          <p className="max-w-md leading-5">
+            Beevia is not a bank. Financial services are provided by licensed
+            third-party partners; Beevia never holds user funds directly.
+          </p>
+          <p>&copy; {new Date().getFullYear()} Beevia. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }
