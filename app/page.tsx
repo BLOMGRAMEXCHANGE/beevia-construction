@@ -45,7 +45,7 @@ export default function Home() {
           >
             Message. Call. Move money.
             <br />
-            All in <span className="text-accent">one</span> place.
+            All in <span className=" text-[var(--muted)]">one</span> place.
           </h1>
 
           <div
